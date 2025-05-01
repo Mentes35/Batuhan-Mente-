@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Batuhan MENTEŞ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --accent-blue: #464646;
+      --light-cream: #f3f3f3;
+      --deep-orange: #515151;
+      --soft-orange: #000000;
+      --footer-bg: #464646;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    body {
+      background: var(--light-cream);
+      color: #333;
+      position: relative;
+    }
+
+    nav {
+  background: var(--soft-orange);
+  padding: 15px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* menü ortalanır */
+  gap: 40px;
+}
+
+.nav-left {
+  position: absolute;
+  left: 30px;
+}
+
+.logo img {
+  height: 150px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+
+    header {
+      background-color: var(--light-cream);
+      text-align: center;
+      padding: 100px 20px;
+    }
+    header h1 {
+      font-size: 3em;
+      color: var(--accent-blue);
+    }
+    header p {
+      font-size: 1.2em;
+      margin-top: 10px;
+    }
+    .btn {
+      margin-top: 20px;
+      background: var(--accent-blue);
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-block;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    section h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: var(--accent-blue);
+    }
+
+    .books, .awards, .reviews, .blog {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .card img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+    .card h3 {
+      color: var(--accent-blue);
+    }
+
+    footer {
+      background: var(--footer-bg);
+      text-align: center;
+      padding: 20px;
+      color: white;
+      margin-top: 60px;
+    }
+    .profile-photo {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%; /* Daire */
+    object-fit: cover; /* Taşırmadan oturtur */
+    border: 4px solid white; /* Beyaz kenar */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Hafif gölge */
+    margin-top: 20px;
+  }
+  @media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
+  }
+
+  .nav-left {
+    position: static;
+    text-align: center;
+  }
+
+  .logo img {
+    height: 80px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .profile-photo {
+    width: 200px;
+    height: 200px;
+  }
+
+  section {
+    padding: 40px 15px;
+  }
+
+  .books, .awards, .reviews, .blog {
+    grid-template-columns: 1fr;
+  }
+
+  header {
+    padding: 60px 15px;
+  }
+
+  header h1 {
+    font-size: 2.2em;
+  }
+
+  header p {
+    font-size: 1em;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-left">
+      <a href="#home" class="logo">
+        <img src="BM.png" alt="Batuhan MENTEŞ Logo">
+      </a>
+    </div>
+    <div class="nav-center">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#resume">Resume/CV</a></li>
+        <li><a href="#certification">Certification</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  
+
+  <header id="home">
+    <h1>Batuhan MENTEŞ</h1>
+    <p>Mechatronics Engineer</p>
+    <img src="foto.jpg" alt="Batuhan MENTEŞ" class="profile-photo">
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p style="text-align:center; max-width: 700px; margin:auto;">I am a Mechatronics Engineer, proudly graduated from Celal Bayar University. Currently, I am advancing my academic journey with a master's degree in Software Engineering at Katip Çelebi University.
+
+      Professionally, I serve as a Senior Product Development Engineer at Çeksan, where I focus on designing and implementing innovative, efficient, and sustainable solutions for industrial machinery—particularly road sweeping vehicles. My role involves everything from mechanical design and optimization to collaborating across disciplines to bring complex products from concept to reality.
+      
+      One of the milestones in my career has been contributing to a patent project that is now published on Google Patents, showcasing my commitment to innovation and problem-solving.
+      
+      Beyond mechanical engineering, I am deeply passionate about software development and UI/UX design. I'm actively working on improving my skills in Python, PyQt, and web technologies, building both engineering tools and creative personal projects. I enjoy merging mechanical systems with intelligent software to build smarter, more adaptive solutions.
+      
+      In every project I take on, I aim to bridge the gap between engineering and technology—with a constant desire to learn, adapt, and grow.</p>
+  </section>
+
+  <section id="portfolio">
+    <h2>Portfolio</h2>
+    <div class="books">
+      <div class="card">
+        <img src="https://ceksanmakina.com/doc/pr/cityray.jpg" alt="Product Development Engineer">
+        <h3>Product Development Engineer</h3>
+        <p>As a Senior Product Development Engineer at Çeksan Sweepers, I specialize in developing innovative solutions for industrial products. You can view our projects on <a href="https://ceksanmakina.com/" target="_blank">Çeksan Sweepers</a>. I have contributed to a patent project published on <a href="https://patents.google.com/patent/TR2021019367Y" target="_blank">Google Patents</a>.</p>
+      </div>
+      <div class="card">
+        <img src="https://phoenixnap.com/glossary/wp-content/uploads/2023/09/what-is-software-engineering.jpg" alt="Software Engineer">
+        <h3>Software Engineer</h3>
+        <p>As a Software Engineer, I design and develop software solutions, including engineering-focused tools and interactive web applications, using Matlab, Python, PyQt, HTML, and CSS. You can view my projects on <a href="https://github.com/Mentes35" target="_blank">GitHub</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="resume">
+    <h2>Resume/CV</h2>
+    <div class="reviews">
+      <div class="card">
+        <a href="https://github.com/Mentes35/cv/blob/main/Batuhan_Mentes%CC%A7_CV%20(1).pdf?raw=true" target="_blank" style="display:inline-block; padding:10px 20px; background-color:#000000; color:white; text-decoration:none; border-radius:5px;">Download My CV</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="certification">
+    <h2>Certification</h2>
+    <div class="awards">
+      <div class="card"><img src="1.jpg" alt="Award 1"><p>FMEA DESING AND PROCESS FMEA</p></div>
+      <div class="card"><img src="2.jpg" alt="Award 2"><p>SolidWorks Composer</p></div>
+      <div class="card"><img src="3.jpg" alt="Award 3"><p>SolidWorks Basic Training</p></div>
+      <div class="card"><img src="4.jpg" alt="Award 4"><p>SolidWorks Advanced Machine Design Training</p></div>
+      <div class="card"><img src="5.jpg" alt="Award 5"><p>SolidWorks Routing Training</p></div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p style="text-align:center">For communication: <a href="mailto:bmentes35@gmail.com">bmentes35@gmail.com</a></p>
+  </section>
+
+  <footer>
+    © 2025 Batuhan MENTEŞ | All Rights Reserved
+  </footer>
+
+</body>
+</html>
