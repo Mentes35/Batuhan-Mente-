@@ -29,64 +29,74 @@
     }
 
     nav {
-  background: var(--soft-orange);
-  padding: 10px 30px;
-  position: sticky;
-  top: 0;
-  z-index: 999;
-  display: flex;
-  align-items: center;
-  justify-content: center; /* menüyü ortala */
-  flex-wrap: wrap;
-  gap: 10px;
-}
+      background: var(--soft-orange);
+      padding: 10px 30px;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
 
-.nav-left {
-  position: absolute;
-  left: 20px;
-  display: flex;
-  align-items: center;
-}
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
 
-.logo img {
-  height: 50px;
-  margin: 0;
-}
+    nav a:hover {
+      color: #ccc;
+    }
 
-.hamburger {
-  display: none;
-  font-size: 30px;
-  color: white;
-  cursor: pointer;
-}
+    .nav-left {
+      position: absolute;
+      left: 20px;
+      display: flex;
+      align-items: center;
+    }
 
-@media (max-width: 768px) {
-  nav {
-    justify-content: space-between;
-  }
+    .logo img {
+      height: 50px;
+      margin: 0;
+    }
 
-  .hamburger {
-    display: block;
-  }
+    .hamburger {
+      display: none;
+      font-size: 30px;
+      color: white;
+      cursor: pointer;
+    }
 
-  #nav-menu {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background-color: var(--soft-orange);
-    margin-top: 10px;
-  }
+    @media (max-width: 768px) {
+      nav {
+        justify-content: space-between;
+      }
 
-  #nav-menu.active {
-    display: flex;
-  }
+      .hamburger {
+        display: block;
+      }
 
-  #nav-menu li {
-    text-align: center;
-    padding: 10px 0;
-  }
-}
+      #nav-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--soft-orange);
+        margin-top: 10px;
+      }
 
+      #nav-menu.active {
+        display: flex;
+      }
+
+      #nav-menu li {
+        text-align: center;
+        padding: 10px 0;
+      }
+    }
 
     header {
       background-color: var(--light-cream);
@@ -254,23 +264,22 @@
     © 2025 Batuhan MENTEŞ | All Rights Reserved
   </footer>
 
- <script>
-  function toggleMenu() {
-    var menu = document.getElementById("nav-menu");
-    menu.classList.toggle("active");
-  }
+  <script>
+    function toggleMenu() {
+      var menu = document.getElementById("nav-menu");
+      menu.classList.toggle("active");
+    }
 
-  // Tıklanan menü bağlantısından sonra menüyü kapat
-  document.addEventListener("DOMContentLoaded", function () {
-    const menuLinks = document.querySelectorAll("#nav-menu a");
-    const menu = document.getElementById("nav-menu");
+    document.addEventListener("DOMContentLoaded", function () {
+      const menuLinks = document.querySelectorAll("#nav-menu a");
+      const menu = document.getElementById("nav-menu");
 
-    menuLinks.forEach(function (link) {
-      link.addEventListener("click", function () {
-        menu.classList.remove("active");
+      menuLinks.forEach(function (link) {
+        link.addEventListener("click", function () {
+          menu.classList.remove("active");
+        });
       });
     });
-  });
-</script>
+  </script>
 </body>
 </html>
